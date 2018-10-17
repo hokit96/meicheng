@@ -1,0 +1,488 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+    <link rel="shortcut icon" href="iBooks-icon.png" />
+    <title>Northern Fame Bookstore</title>
+    <style type="text/css">
+        body {
+            background-image: url('tumblr_static_e0blwthhxggkgg8ogcssw4gwk.png');
+        }
+        
+        .wrap {
+            position: relative;
+            min-height: 100%;
+            width: 1200px;
+            display: block;
+            height: 1200px;
+        }
+        
+        #header {
+            width: 100%;
+            float: left;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 90%;
+            font-weight: bold;
+            height: 300px;
+            position: absolute;
+            background-image: url('oud.jpg');
+            z-index: 1;
+        }
+        
+        #footer {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 90%;
+            font-weight: bold;
+            width: 1200px;
+            height: 250px;
+            position: absolute;
+            clear: both;
+            margin-top: 100px;
+            background-image: url('026e5bf83dd775c92fe819cbcba81ffc.jpg');
+            border-top: thin black solid;
+        }
+        
+        #login {
+            font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 15px;
+            float: right;
+            margin-right: 15px;
+            /*-ms-transform: rotate(-2deg); /* IE 9 */
+            /*-webkit-transform: rotate(-2deg); /* Chrome, Safari, Opera */
+            /*transform: rotate(-2deg);*/
+        }
+        
+        #login ul {
+            list-style-type: none;
+        }
+        
+        #login ul li p {
+            color: black;
+            text-decoration: none;
+        }
+        
+        #login ul li a {
+            color: #E05151;
+            text-decoration: none;
+        }
+        
+        #login ul li a:hover {
+            color: #FFD452;
+        }
+        
+        .menu {
+            font-size: 16px;
+            font-family: Arial;
+            width: 1140px;
+            text-transform: uppercase;
+            background-color: #333333;
+            float: left;
+            position: absolute;
+            padding-left: 65px;
+            margin-top: 75px;
+        }
+        
+        .menu ul {
+            height: 9px;
+            line-height: 9px;
+            list-style-type: none;
+            padding: 0;
+        }
+        
+        .menu ul li {
+            float: left;
+            margin-right: 35px;
+        }
+        
+        .menu ul li a {
+            text-decoration: none;
+            color: white;
+            opacity: 4;
+        }
+        
+        .menu ul li a:hover {
+            font-size: 15px;
+            color: #FFD452;
+        }
+        
+        .small_icon a:hover p {
+            color: #E05151;
+        }
+        
+        .group:before,
+        .group:after {
+            content: "";
+            display: table;
+        }
+        
+        .group:after {
+            clear: both;
+        }
+        
+        .group {
+            clear: both;
+            *zoom: 1;
+        }
+        
+        .categories_tab {
+            font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+            font-size: 14px;
+            width: 200px;
+            float: left;
+            margin-right: 5px;
+            display: inline-block;
+            margin-top: -9px;
+        }
+        
+        .categories_tab ul {
+            list-style-type: none;
+        }
+        
+        .categories_tab a:link {
+            color: gray;
+            text-decoration: none;
+        }
+        
+        .categories_tab a:hover {
+            color: #E05151;
+            font-weight: bold;
+        }
+        
+        .categories_tab ul li p {
+            font-size: 16px;
+        }
+        
+        #homepage {
+            width: 100%;
+            height: 1300px;
+            background: #F5F3EE;
+            display: block;
+            z-index: -1;
+        }
+        
+        .homepage_content {
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 15px;
+            color: #333333;
+            float: left;
+            margin-top: 410px;
+            width: 1200px;
+            position: absolute;
+        }
+        
+        .form_instruction {
+            display: block;
+            width: 520px;
+            margin-left: 150px;
+            text-align: justify;
+        }
+        
+        #form {
+            background: rgba($form-bg, .9);
+            margin: auto;
+            box-shadow: 0 4px 10px 4px rgba($form-bg, .3);
+            font-weight: bold;
+            color: #993300;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif, 'Brush Script MT';
+            margin-top: 8px;
+        }
+        
+        .tracking {
+            width: 900px;
+            border: 1px black solid;
+            border-collapse: collapse;
+            margin-left: 150px;
+        }
+        
+        .tracking tr th {
+            font-weight: bold;
+            border: 1px black solid;
+            text-align: center;
+            padding: 5px;
+            background: #FEEAC7;
+        }
+        
+        .tracking tr td {
+            border: 1px black solid;
+            text-align: center;
+            padding: 10px;
+            background: white;
+        }
+        
+        li a,
+        .dropbtn {
+            display: inline-block;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+        }
+        
+        li.dropdown {
+            display: inline-block;
+            width: 140px;
+        }
+        
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #333333;
+        }
+        
+        .dropdown-content a {
+            color: black;
+            text-decoration: none;
+            display: block;
+            font-size: 15px;
+        }
+        
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <!--wrapper-->
+    <div class="wrap" style="margin:auto">
+
+        <!--header-->
+        <div id="header" style="left:0; top:0;">
+
+            <div id="login">
+                <ul>
+                    <li>
+                        <p>Welcome back, STAFF001!
+                            <a href="Home.html">Log Out</a></p>
+                    </li>
+                </ul>
+            </div>
+
+            <!--bookstore name-->
+            <div>
+                <p style="color:#E05151;padding-left:50px;font-size:70px;width:900px;font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;letter-spacing:-4px;font-weight:bold;">Northern Fame <span style="color:black;font-weight:lighter;">Bookstore</span></p>
+            </div>
+            <!--end of bookstore name-->
+
+            <!--main menu-->
+            <div class="menu">
+                <ul>
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn">VIEW BOOKS</a>
+                        <div class="dropdown-content" style="padding:10px 20px;margin-top:4px;">
+                            <a href="Staff - Add Book.html" style="padding-top:16px;padding-bottom:10px;">ADD BOOK</a>
+                            <a href="Staff - Update Book.html" style="padding-top:15px;padding-bottom:10px;">UPDATE BOOK</a>
+                        </div>
+                    </li>
+                    <li style="width:150px;"><a href="Staff - Orders Received.html">VIEW ORDERS</a></li>
+                    <li style="width:180px;"><a href="Staff - Feedbacks Received.html">VIEW FEEDBACKS</a></li>
+                    <li style="width:200px;"><a href="Staff - Update Inventory.html">UPDATE INVENTORY</a></li>
+                    <li style="width:295px;"><a href="Staff - Generate Inventory Report.html">GENERATE INVENTORY REPORT</a></li>
+                </ul>
+            </div>
+            <!--end of main menu-->
+
+        </div>
+        <!--end of header-->
+
+        <!--homepage-->
+        <div id="homepage">
+
+            <!--homepage content-->
+            <div class="homepage_content">
+
+                <!--grouping-->
+                <div class="group">
+
+                    <!--inventory report-->
+                    <span class="form_instruction" style="font-size:19px;font-weight:bold;margin-bottom:35px;">Inventory Report</span>
+
+                    <table class="tracking">
+                        <tr>
+                            <th style="width: 374px">Book ID</th>
+                            <th style="width: 1540px">Book Title</th>
+                            <th style="width: 290px">Author</th>
+                            <th style="width: 290px">Category</th>
+                            <th style="width: 562px">Price</th>
+                            <th style="width: 524px">Inventory</th>
+                            <th style="width: 524px">Quantity Sold</th>
+                            <th style="width: 524px">Quantity Left</th>
+                        </tr>
+                        <tr>
+                            <td style="width: 374px">NFB001</td>
+                            <td style="width: 1540px">The Innocent Killer</td>
+                            <td style="width: 305px">Michelle Griesbach</td>
+                            <td style="width: 305px">Non-Fiction</td>
+                            <td style="width: 562px">RM39.90</td>
+                            <td style="width: 524px;">100</td>
+                            <td style="width: 524px;">54</td>
+                            <td style="width: 524px;">46</td>
+                        </tr>
+                        <tr>
+                            <td style="width: 374px">NFB002</td>
+                            <td style="width: 1540px">The 8-Week Diet</td>
+                            <td style="width: 305px">Dr Michael Mosley</td>
+                            <td style="width: 305px">Self-Help</td>
+                            <td style="width: 562px">RM29.90</td>
+                            <td style="width: 524px;">100</td>
+                            <td style="width: 524px;">36</td>
+                            <td style="width: 524px;">64</td>
+                        </tr>
+                        <tr>
+                            <td style="width: 374px">NFB003</td>
+                            <td style="width: 1540px">Me Before <br/>You</td>
+                            <td style="width: 305px">Jojo Moyes</td>
+                            <td style="width: 305px">Fiction</td>
+                            <td style="width: 562px">RM39.90</td>
+                            <td style="width: 524px;">100</td>
+                            <td style="width: 524px;">41</td>
+                            <td style="width: 524px;">59</td>
+                        </tr>
+                        <tr>
+                            <td style="width: 374px">NFB004</td>
+                            <td style="width: 1540px">Spiralise!</td>
+                            <td style="width: 305px">Fedrick Evans</td>
+                            <td style="width: 305px">Cooking</td>
+                            <td style="width: 562px">RM38.50</td>
+                            <td style="width: 524px;">100</td>
+                            <td style="width: 524px;">25</td>
+                            <td style="width: 524px;">75</td>
+                        </tr>
+                        <tr>
+                            <td style="width: 374px">NFB005</td>
+                            <td style="width: 1540px">My Brilliant Friend</td>
+                            <td style="width: 305px">Elena Ferrante</td>
+                            <td style="width: 305px">Psychology</td>
+                            <td style="width: 562px">RM39.90</td>
+                            <td style="width: 524px;">100</td>
+                            <td style="width: 524px;">37</td>
+                            <td style="width: 524px;">63</td>
+                        </tr>
+                        <tr>
+                            <td style="width: 374px">NFB006</td>
+                            <td style="width: 1540px">Humans of New York</td>
+                            <td style="width: 305px">Brandon Stanton</td>
+                            <td style="width: 305px">Romance</td>
+                            <td style="width: 562px">RM59.90</td>
+                            <td style="width: 524px;">100</td>
+                            <td style="width: 524px;">64</td>
+                            <td style="width: 524px;">36</td>
+                        </tr>
+                        <tr>
+                            <td style="width: 374px">NFB007</td>
+                            <td style="width: 1540px">Spiralise!</td>
+                            <td style="width: 305px">Jojo Michael</td>
+                            <td style="width: 305px">Fiction</td>
+                            <td style="width: 562px">RM39.90</td>
+                            <td style="width: 524px;">100</td>
+                            <td style="width: 524px;">23</td>
+                            <td style="width: 524px;">77</td>
+                        </tr>
+                        <tr>
+                            <td style="width: 374px">NFB008</td>
+                            <td style="width: 1540px">My Brilliant Friend</td>
+                            <td style="width: 305px">Veronica Roth</td>
+                            <td style="width: 305px">Non-Fiction</td>
+                            <td style="width: 562px">RM39.90</td>
+                            <td style="width: 524px;">100</td>
+                            <td style="width: 524px;">54</td>
+                            <td style="width: 524px;">46</td>
+                        </tr>
+                        <tr>
+                            <td style="width: 374px">NFB009</td>
+                            <td style="width: 1540px">Humans of New York</td>
+                            <td style="width: 305px">Liane Moriarty</td>
+                            <td style="width: 305px">Travel</td>
+                            <td style="width: 562px">RM39.90</td>
+                            <td style="width: 524px;">100</td>
+                            <td style="width: 524px;">22</td>
+                            <td style="width: 524px;">78</td>
+                        </tr>
+                        <tr>
+                            <td style="width: 374px">NFB010</td>
+                            <td style="width: 1540px">The Atlantis Gene</td>
+                            <td style="width: 305px">A. G. Riddle</td>
+                            <td style="width: 305px">Religion</td>
+                            <td style="width: 562px">RM61.90</td>
+                            <td style="width: 524px;">100</td>
+                            <td style="width: 524px;">34</td>
+                            <td style="width: 524px;">66</td>
+                        </tr>
+                    </table>
+
+                    <form method="post" name="back" onsubmit="alert('Printed successfully.');">
+                        <input name="Submit" type="submit" value="Print" style="background-color:#111222;color:#F5F3EE;font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;height:40px;width:100px;font-size:13px;margin-left:950px;margin-top:25px;" />
+                    </form>
+                    <!--end of inventory report-->
+
+                    <!--footer-->
+                    <div>
+                        <table id="footer">
+                            <tr>
+                                <td colspan="3" style="height: 37px">
+                                    <p style="padding-left:60px;padding-top:10px; width: 188px; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;font-size:17px;letter-spacing:-1px;text-transform:uppercase;">Connect with us on:</p>
+                                </td>
+                                <td colspan="2" style="height: 37px">
+                                    <p style="padding-left:100px;padding-top:10px; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;font-size:17px;letter-spacing:-1px;text-transform:uppercase;">Our courier partners:</p>
+                                </td>
+                                <td colspan="2" style="height: 37px">
+                                    <p style="padding-left:30px;padding-top:10px; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;font-size:17px;letter-spacing:-1px;text-transform:uppercase;">We accept:</p>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td style="height: 45px">
+                                    <a href="https://www.facebook.com/"><img src="1459276176_online_social_media_facebook.png" style="width:50px;height:50px;float:left;margin-right:15px;margin-left:60px;margin-bottom:50px;" /></a>
+                                </td>
+                                <td style="height: 45px">
+                                    <a href="https://www.twitter.com/"><img src="1459276177_twitter_online_social_media.png" style="width:50px;height:50px;float:left;margin-right:15px;margin-bottom:50px;" /></a>
+                                </td>
+                                <td style="height: 45px">
+                                    <a href="https://www.instagram.com/"><img src="1459276179_instagram_online_social_media_photo.png" style="width:50px;height:50px;float:left;margin-right:15px;margin-bottom:50px;" /></a>
+                                </td>
+
+                                <td style="width:180px; padding-left:100px; height: 45px;">
+                                    <img src="poslaju-malaysiacourier.png" style="float:left;margin-right:15px;" height="38" width="150" />
+                                    <img src="icon-courier-dhl2.png" style="float:left;margin-right:15px;margin-top:25px;" height="49" width="150" />
+                                </td>
+                                <td style="width:226px; height: 45px;">
+                                    <img src="icon-courier-skynet.png" style="float:left;margin-right:15px;margin-top:10px;" height="49" width="141" />
+                                    <img src="icon-courier-fedex.png" style="float:left;margin-right:15px;margin-top:25px;" height="49" width="120" />
+                                </td>
+
+                                <td style="width:177px; padding-left:30px; height: 45px;">
+                                    <img src="paypal.jpg" style="float:left;margin-right:15px;margin-top:-10px;" height="37" width="113" />
+                                    <img src="paypal.png" style="float:left;margin-right:15px;margin-top:30px;" height="49" width="150" />
+                                </td>
+                                <td style="width:209px; height: 45px;">
+                                    <img src="MasterCard-Logo.png" style="float:left;margin-right:15px;margin-top:-10px;" height="66" width="94" />
+                                    <img src="western_union.jpg" style="float:left;margin-right: 59px;" height="76" width="172" />
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td colspan="7">
+                                    <p style="padding-top:10px;font-size:12px;float:left;width:394px;margin-left:10px;">Northern Fame Bookstore (M) Sdn. Bhd. © 2016. All Rights Reserved.</p>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <!--end of footer-->
+
+                </div>
+                <!--end of grouping-->
+
+            </div>
+            <!--end of homepage content-->
+
+        </div>
+        <!--end homepage-->
+
+    </div>
+    <!--end of wrapper-->
+
+</body>
+
+</html>
